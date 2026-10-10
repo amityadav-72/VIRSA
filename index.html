@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIRSA | Restro • Cafe • Lounge | Sai Nagar, Amravati</title>
+  <meta name="description" content="Welcome to VIRSA, where culinary tradition meets innovation. Nurtured by The New Eagle Restaurant in Sai Nagar, Amravati. Savor authentic multi-cuisine dining, starlit lounge, and candlelight dinners.">
+  <meta name="keywords" content="Virsa Amravati, Virsa Restro Cafe, The New Eagle Restaurant, Amravati Restaurant, Chicken Rara, Dal Virsa, Clay Pot Biryani, Sai Nagar Badnera Road">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/virsa-logo.jpg">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT & CONTACT BAR
+       ========================================================================== -->
+  <aside class="top-bar" aria-label="Quick Contact & Timing Info">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Guruchhaya Colony, Sai Nagar, Badnera Rd, Amravati, Maharashtra</span>
+        </div>
+        <div class="top-info-item">
+          <i class="far fa-clock"></i>
+          <span>Open Daily: 1:00 PM – 12:30 AM</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-info-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+917022307566">+91 70223 07566</a>
+        </div>
+        <div class="top-info-item">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/917022307566" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-wrapper">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" title="VIRSA Amravati">
+        <img src="assets/images/virsa-logo.jpg" alt="VIRSA Logo">
+        <div class="brand-text-wrap">
+          <span class="brand-title">VIRSA</span>
+          <span class="brand-subtitle">Restro • Cafe • Lounge</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#menu" class="nav-link">Culinary Menu</a></li>
+          <li><a href="#lounge" class="nav-link">Lounge & Cafe</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact & Location</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Dining Plate Cart Trigger -->
+        <button class="cart-toggle-btn" id="cartToggleBtn" title="View Dining Plate Order" aria-label="View Dining Plate Order">
+          <i class="fas fa-utensils"></i>
+          <span class="cart-badge" id="cartBadge" style="display:none;">0</span>
+        </button>
+
+        <!-- Book Table CTA -->
+        <button class="btn btn-gold btn-sm d-none-mobile" onclick="openTableModal()">
+          <i class="far fa-calendar-check"></i> Book Table
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle-btn" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-slider">
+      <div class="hero-slide active" style="background-image: url('assets/images/hero-bg.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/about-interior.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/dining-hall.jpg');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-tagline">
+        <span class="badge-gold">
+          <i class="fas fa-feather-alt"></i> Nurtured by The New Eagle Restaurant | Amravati
+        </span>
+      </div>
+
+      <h1 class="hero-title">
+        Where Culinary Tradition <br>
+        <span class="text-gold-gradient">Meets Innovation</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        A place where flavors tell stories and every meal is a celebration. Savor authentic North Indian, Mughlai, Continental, Sizzlers, Clay Pot Biryanis, and artisan cafe brews in Sai Nagar, Amravati.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#menu" class="btn btn-gold btn-lg">
+          <i class="fas fa-book-open"></i> Explore 120+ Dishes Menu
+        </a>
+        <button class="btn btn-outline-gold btn-lg" onclick="openTableModal()">
+          <i class="far fa-calendar-alt"></i> Reserve A Table
+        </button>
+        <a href="#lounge" class="btn btn-emerald btn-lg">
+          <i class="fas fa-moon"></i> Starlit Rooftop Lounge
+        </a>
+      </div>
+
+      <!-- Quick Table Reservation Bar -->
+      <div class="quick-booking-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 12px;">
+          <span style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--c-gold-300);">
+            <i class="fas fa-chair text-gold"></i> Instant Table Reservation
+          </span>
+          <span style="font-size: 0.82rem; color: var(--c-text-muted);">
+            Open Daily: 1:00 PM – 12:30 AM
+          </span>
+        </div>
+
+        <form id="quickBookingForm">
+          <div class="booking-form-grid" style="grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)) 160px;">
+            <div class="form-group">
+              <label for="quickDate">Dining Date</label>
+              <input type="date" id="quickDate" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+              <label for="quickTime">Time Slot</label>
+              <select id="quickTime" class="form-control">
+                <option value="1:00 PM">1:00 PM (Lunch)</option>
+                <option value="2:00 PM">2:00 PM (Lunch)</option>
+                <option value="7:30 PM">7:30 PM (Dinner)</option>
+                <option value="8:30 PM" selected>8:30 PM (Dinner)</option>
+                <option value="9:30 PM">9:30 PM (Late Dinner)</option>
+                <option value="10:30 PM">10:30 PM (Night Dine)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="quickGuests">Number of Guests</label>
+              <select id="quickGuests" class="form-control">
+                <option value="2">2 Guests (Couple)</option>
+                <option value="4" selected>4 Guests (Family)</option>
+                <option value="6">6 Guests</option>
+                <option value="8">8 - 12 Guests (Party)</option>
+                <option value="15">15+ Guests (Celebration)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="quickSeating">Atmosphere</label>
+              <select id="quickSeating" class="form-control">
+                <option value="Indoor AC Fine Dine">Indoor AC Fine Dine</option>
+                <option value="Rooftop Starlit Lounge">Rooftop Starlit Lounge</option>
+                <option value="Romantic Candlelight Cabana">Romantic Candlelight Cabana</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>&nbsp;</label>
+              <button type="submit" class="btn btn-gold" style="width: 100%; height: 46px;">
+                Reserve Now
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STATS HIGHLIGHT STRIP
+       ========================================================================== -->
+  <section class="stats-strip" aria-label="Key Highlights">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">120+</span>
+          <span class="stat-label">Authentic Dishes & Drinks</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4.3★</span>
+          <span class="stat-label">Loved by Amravati Patrons</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Legacy</span>
+          <span class="stat-label">Nurtured by The New Eagle</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">7 Days</span>
+          <span class="stat-label">1:00 PM – 12:30 AM Daily</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT SECTION (WITH USER'S EXACT TEXT & STORY)
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Visuals Column -->
+        <div class="about-visuals">
+          <img src="assets/images/about-interior.jpg" alt="Virsa Fine Dining Atmosphere" class="about-main-img">
+          <div class="about-badge-card">
+            <i class="fas fa-heart about-badge-icon" style="color:var(--c-gold-400);"></i>
+            <div class="about-badge-text">
+              <h4>The New Eagle Heritage</h4>
+              <p>Passion for Exquisite Dining</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Column with USER'S EXACT STORY -->
+        <div class="about-content-col">
+          <div class="section-header" style="text-align: left; margin-bottom: 22px;">
+            <span class="subheading" style="justify-content: flex-start;">Our Heartfelt Story</span>
+            <h2 class="main-title">Welcome to <span class="text-gold-gradient">VIRSA</span></h2>
+          </div>
+
+          <div style="background: rgba(18, 48, 35, 0.45); border-left: 3px solid var(--c-gold-400); padding: 18px 22px; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 20px;">
+            <p style="font-size: 1.05rem; color: var(--c-gold-300); font-weight: 500; line-height: 1.6; margin: 0;">
+              "Welcome to VIRSA, where culinary tradition meets innovation, a place where flavors tell stories and every meal is a celebration."
+            </p>
+          </div>
+
+          <p class="about-desc" style="margin-bottom: 16px;">
+            Nestled in the heart of Amravati, <strong>Virsa isn't just a restaurant; it's a testament to the passion for exquisite dining nurtured by The New Eagle Restaurant</strong>. Our journey began with a vision to create a haven where exceptional cuisine, warm ambiance, and heartfelt hospitality converge.
+          </p>
+
+          <p class="about-desc" style="margin-bottom: 16px;">
+            At Virsa, we cherish the richness of heritage and culinary artistry. Our menu is a canvas that honors the traditional flavors of India while exploring new culinary horizons. Each dish is a symphony of carefully selected ingredients, crafted by our skilled chefs who infuse their expertise and creativity into every creation.
+          </p>
+
+          <p class="about-desc" style="margin-bottom: 16px;">
+            But Virsa is more than just a place to savor exceptional cuisine. It's a space where every guest becomes a part of our extended family. Our team is dedicated to ensuring that every visit is not just a meal but an experience to cherish—a seamless blend of remarkable tastes and genuine hospitality.
+          </p>
+
+          <p class="about-desc" style="margin-bottom: 20px;">
+            Step into our elegant ambiance, where every detail has been meticulously designed to create a sense of comfort and sophistication. Whether it's an intimate dinner, a family celebration, or a gathering of friends, our welcoming atmosphere sets the stage for memorable moments.
+          </p>
+
+          <div style="background: rgba(5, 15, 11, 0.7); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 26px;">
+            <p style="color: var(--c-text-secondary); font-size: 0.9rem; margin-bottom: 6px;">
+              <em>"We owe our success and passion to our patrons—the connoisseurs of fine dining—who have supported and inspired us on this incredible journey. Your satisfaction is our utmost priority, and we continually strive to exceed your expectations. Thank you for being a part of our Virsa family."</em>
+            </p>
+            <span style="font-family: var(--font-serif); color: var(--c-gold-400); font-size: 0.95rem; font-weight: 700;">
+              Warm Regards, The VIRSA Family
+            </span>
+          </div>
+
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="#menu" class="btn btn-gold">
+              <i class="fas fa-utensils"></i> Explore Our Repertoire
+            </a>
+            <button class="btn btn-outline-gold" onclick="openTableModal()">
+              <i class="far fa-calendar-check"></i> Dine With Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MENU SECTION (ALL USER-PROVIDED DISHES)
+       ========================================================================== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">Masterchef Culinary Repertoire</span>
+        <h2 class="main-title">Explore Our <span class="text-gold-gradient">Authentic Menu</span></h2>
+        <p class="desc">
+          Crafted by skilled chefs blending traditional Indian roots with international Continental & Oriental delicacies. Every item listed with genuine ingredients, spices, and exact prices.
+        </p>
+      </div>
+
+      <!-- Controls: Search & Category Filters -->
+      <div class="menu-filter-controls">
+        <!-- Live Search bar -->
+        <div class="menu-search-bar">
+          <i class="fas fa-search menu-search-icon"></i>
+          <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search by dish name, e.g. Rara, Dal Virsa, Nachos, Paneer Tikka, Clay Pot, Sizzler...">
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="menu-categories-wrap">
+          <button class="category-pill active" data-category="all">All Dishes</button>
+          <button class="category-pill" data-category="beverages">Hot & Cold Beverages</button>
+          <button class="category-pill" data-category="continental-starters">Continental Starters</button>
+          <button class="category-pill" data-category="oriental-starters">Oriental Starters</button>
+          <button class="category-pill" data-category="indian-starters">Indian Tandoor Starters</button>
+          <button class="category-pill" data-category="soups">Soups & Salads</button>
+          <button class="category-pill" data-category="continental-mains">Continental & Pastas</button>
+          <button class="category-pill" data-category="sizzlers">House Sizzlers</button>
+          <button class="category-pill" data-category="asian">Asian & Noodles</button>
+          <button class="category-pill" data-category="indian-veg-mains">Indian Veg Mains</button>
+          <button class="category-pill" data-category="indian-nonveg-mains">Indian Non-Veg Mains</button>
+          <button class="category-pill" data-category="dal-darbar">Dal Darbar</button>
+          <button class="category-pill" data-category="biryani">Clay Pot Biryani & Rice</button>
+          <button class="category-pill" data-category="breads">Tandoor Breads</button>
+          <button class="category-pill" data-category="desserts">Desserts & Ice Creams</button>
+        </div>
+
+        <!-- Dietary Filters -->
+        <div class="dietary-toggle-wrap">
+          <button class="diet-filter-btn active" data-diet="all">
+            <i class="fas fa-circle-notch"></i> All Cuisines
+          </button>
+          <button class="diet-filter-btn" data-diet="veg">
+            <span class="badge-veg"></span> Pure Veg
+          </button>
+          <button class="diet-filter-btn" data-diet="non-veg">
+            <span class="badge-nonveg"></span> Non-Veg
+          </button>
+        </div>
+      </div>
+
+      <!-- Dishes Grid (Populated dynamically by main.js with all 120+ authentic dishes) -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Injected by main.js -->
+      </div>
+
+      <!-- Bottom Menu CTA -->
+      <div style="text-align: center; margin-top: 50px;">
+        <button class="btn btn-gold btn-lg" onclick="openTableModal()">
+          <i class="fas fa-calendar-check"></i> Book Table To Savor These Dishes
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LOUNGE & CAFE SECTION
+       ========================================================================== -->
+  <section class="lounge-section" id="lounge">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">Atmosphere, Music & Sips</span>
+        <h2 class="main-title">Rooftop Starlit Lounge & <span class="text-gold-gradient">Cafe</span></h2>
+        <p class="desc">
+          When dusk settles over Amravati, VIRSA transforms into a glowing haven of ambient lights, chilled artisan mocktails, acoustic tunes, and romantic private cabanas.
+        </p>
+      </div>
+
+      <div class="lounge-grid">
+        <!-- Content Column -->
+        <div class="lounge-content">
+          <h2>Unwind Under the <span class="text-gold-gradient">Stars</span></h2>
+          <p>
+            Whether catching up with friends over loaded nachos, sizzlers, and freshly pulled coffee pots, or surprising your partner with an intimate candlelight dinner, our lounge delivers unmatched vibes in Sai Nagar.
+          </p>
+
+          <div class="lounge-features">
+            <div class="lounge-feat">
+              <i class="fas fa-glass-martini-alt"></i>
+              <div>
+                <h4>Artisan Mocktail & Beverage Bar</h4>
+                <p>Curated botanical coolers, fresh lime sodas, thick sweet & dry fruit lassis, and specialty brews.</p>
+              </div>
+            </div>
+
+            <div class="lounge-feat">
+              <i class="fas fa-heart"></i>
+              <div>
+                <h4>Private Candlelight Cabanas</h4>
+                <p>Enclosed bohemian cabanas draped in fairy lights, scented candles, and fresh rose petals.</p>
+              </div>
+            </div>
+
+            <div class="lounge-feat">
+              <i class="fas fa-mug-hot"></i>
+              <div>
+                <h4>Cafe Delights & Desserts</h4>
+                <p>Artisan pastas, Quesadillas, sizzling chocolate brownies, Amrud ice cream, and Banarsi Paan scoops.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <button class="btn btn-gold" onclick="openTableModal({seating:'Rooftop Starlit Lounge'})">
+              <i class="fas fa-chair"></i> Reserve Lounge Table
+            </button>
+            <a href="tel:+917022307566" class="btn btn-outline-gold">
+              <i class="fas fa-phone-alt"></i> Call Lounge Desk
+            </a>
+          </div>
+        </div>
+
+        <!-- Mosaic Visual Column -->
+        <div class="lounge-gallery-mosaic">
+          <div class="mosaic-item">
+            <img src="assets/images/rooftop-lounge.jpg" alt="Rooftop Lounge Night" class="mosaic-img" loading="lazy">
+            <div class="mosaic-label">Open-Air Starlit Ambiance</div>
+          </div>
+          <div class="mosaic-item">
+            <img src="assets/images/candlelight-dinner.jpg" alt="Romantic Candlelight Setup" class="mosaic-img" loading="lazy">
+            <div class="mosaic-label">Romantic Candlelight Cabana</div>
+          </div>
+          <div class="mosaic-item">
+            <img src="assets/images/cafe-ambiance.jpg" alt="Virsa Cafe Corner" class="mosaic-img" loading="lazy">
+            <div class="mosaic-label">Artisan Cafe Delights</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candlelight Dinner Packages Showcase -->
+      <div class="candlelight-banner">
+        <div class="candlelight-header">
+          <span class="badge-gold"><i class="fas fa-heart"></i> Celebrate Love & Anniversaries</span>
+          <h3>Exclusive Romantic Candlelight Experiences</h3>
+          <p style="color: var(--c-text-secondary); max-width: 600px; margin: 0 auto;">
+            Create everlasting memories with our handcrafted couple dining packages in Amravati.
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Package 1 -->
+          <div class="pkg-card">
+            <h4 class="pkg-title">Classic Romantic Evening</h4>
+            <div class="pkg-price">₹1,999 <span style="font-size:0.9rem; color:var(--c-text-muted);">/ couple</span></div>
+            <ul class="pkg-list">
+              <li><i class="fas fa-check"></i> Private decorated table setup</li>
+              <li><i class="fas fa-check"></i> Candlelight & fresh rose petals</li>
+              <li><i class="fas fa-check"></i> 2 Special welcome beverages</li>
+              <li><i class="fas fa-check"></i> 3-Course meal (Starters + Main Course + Dessert)</li>
+              <li><i class="fas fa-check"></i> Soft ambient music</li>
+            </ul>
+            <button class="btn btn-outline-gold" onclick="openCandlelightModal('Classic Romantic Evening (₹1,999)')">
+              Book Classic Package
+            </button>
+          </div>
+
+          <!-- Package 2: Royal Canopy -->
+          <div class="pkg-card" style="border-color: var(--c-gold-400); background: rgba(13, 38, 28, 0.9);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h4 class="pkg-title">Royal Starlit Canopy</h4>
+              <span class="badge-gold">Most Popular</span>
+            </div>
+            <div class="pkg-price">₹2,999 <span style="font-size:0.9rem; color:var(--c-text-muted);">/ couple</span></div>
+            <ul class="pkg-list">
+              <li><i class="fas fa-check"></i> Exclusive private cabana draped with fairy lights</li>
+              <li><i class="fas fa-check"></i> Lavish rose petal pathway & candle clusters</li>
+              <li><i class="fas fa-check"></i> 4-Course gourmet chef tasting feast</li>
+              <li><i class="fas fa-check"></i> 2 Specialty mocktails & beverages</li>
+              <li><i class="fas fa-check"></i> 500g Custom celebration heart cake</li>
+              <li><i class="fas fa-check"></i> Dedicated personal hospitality service</li>
+            </ul>
+            <button class="btn btn-gold" onclick="openCandlelightModal('Royal Starlit Canopy (₹2,999)')">
+              Book Royal Canopy
+            </button>
+          </div>
+
+          <!-- Package 3: Birthday & Friends Gala -->
+          <div class="pkg-card">
+            <h4 class="pkg-title">Lounge Birthday Cabana</h4>
+            <div class="pkg-price">₹4,499 <span style="font-size:0.9rem; color:var(--c-text-muted);">/ group of 6</span></div>
+            <ul class="pkg-list">
+              <li><i class="fas fa-check"></i> Reserved lounge area with balloon decoration</li>
+              <li><i class="fas fa-check"></i> 1 Kg Birthday cake & sparkler candle</li>
+              <li><i class="fas fa-check"></i> Cold beverages & fresh lime pitchers</li>
+              <li><i class="fas fa-check"></i> Platters of Loaded Nachos, Quesadillas, Sizzlers & Fries</li>
+              <li><i class="fas fa-check"></i> Dedicated celebratory playlist</li>
+            </ul>
+            <button class="btn btn-outline-gold" onclick="openCandlelightModal('Lounge Birthday Cabana (₹4,499)')">
+              Book Birthday Cabana
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CUSTOMER REVIEWS SECTION
+       ========================================================================== -->
+  <section class="testimonials-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">Loved by Amravati Diners</span>
+        <h2 class="main-title">What Our Guests <span class="text-gold-gradient">Say</span></h2>
+        <p class="desc">
+          Carrying forward the rich culinary legacy of The New Eagle Restaurant with over 4.3★ ratings across Amravati.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">
+            "The Murg Rara and Clay Pot Biryani here are legendary! True North Indian flavors cooked with rich minced gravy and aromatic spices. The New Eagle quality shines through in every bite."
+          </p>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar">RK</div>
+            <div class="reviewer-info">
+              <h4>Rajesh Khandelwal</h4>
+              <span>Sai Nagar, Amravati</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Dal Virsa is out of this world — simmered overnight with that unmistakable buttery texture. Also loved their loaded nachos and Amrud ice cream with chilli salt. A gem on Badnera Road!"
+          </p>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar">PD</div>
+            <div class="reviewer-info">
+              <h4>Pooja Deshmukh</h4>
+              <span>Badnera Road, Amravati</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="review-text">
+            "Booked the Royal Starlit Canopy for our anniversary dinner. The fairy lights, rose petal path, and candle decor were simply breathtaking. Outstanding hospitality from the staff."
+          </p>
+          <div class="reviewer-profile">
+            <div class="reviewer-avatar">AS</div>
+            <div class="reviewer-info">
+              <h4>Amit & Sneha Shinde</h4>
+              <span>Camp, Amravati</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & LOCATION SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">Get In Touch & Visit</span>
+        <h2 class="main-title">Contact & <span class="text-gold-gradient">Location</span></h2>
+        <p class="desc">
+          Conveniently located in Guruchhaya Colony, Sai Nagar on Badnera Road, Amravati. Drop in for lunch, dinner, or reserve your table in advance.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Pane -->
+        <div class="contact-card-info">
+          <!-- Address Item -->
+          <div class="contact-item-box">
+            <div class="contact-item-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-item-content">
+              <h4>Establishment Address</h4>
+              <p>
+                <strong>VIRSA Restro • Cafe • Lounge</strong><br>
+                <em>Nurtured by The New Eagle Restaurant</em><br>
+                Guruchhaya Colony, Sai Nagar, Badnera Road,<br>
+                Amravati, Maharashtra – 444607, India
+              </p>
+            </div>
+          </div>
+
+          <!-- Phone Item -->
+          <div class="contact-item-box">
+            <div class="contact-item-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-item-content">
+              <h4>Direct Call & Reservations</h4>
+              <p>
+                Reservations & Help Desk: <a href="tel:+917022307566">+91 70223 07566</a><br>
+                Direct WhatsApp Line: <a href="https://wa.me/917022307566" target="_blank" rel="noopener">+91 70223 07566</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Hours Item -->
+          <div class="contact-item-box">
+            <div class="contact-item-icon">
+              <i class="far fa-clock"></i>
+            </div>
+            <div class="contact-item-content">
+              <h4>Operating Hours</h4>
+              <p>
+                Monday – Sunday: <strong>1:00 PM to 12:30 AM</strong><br>
+                Open all 365 days for lunch, dinner, cafe & rooftop experiences.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Action Links -->
+          <div class="quick-action-strip">
+            <a href="https://wa.me/917022307566?text=Hello%20Virsa%20Team,%20I%20would%20like%20to%20reserve%20a%20table" target="_blank" rel="noopener" class="btn btn-gold" style="flex:1;">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="tel:+917022307566" class="btn btn-outline-gold" style="flex:1;">
+              <i class="fas fa-phone-alt"></i> Call Instantly
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="contact-form-card">
+          <h3>Send Us a Message</h3>
+          <p>Have a question regarding menus, parties, or special table seating? We'd love to hear from you:</p>
+
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="contactName">Your Full Name</label>
+              <input type="text" id="contactName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactPhone">Mobile Number (WhatsApp Preferred)</label>
+              <input type="tel" id="contactPhone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Inquiry Category</label>
+              <select id="contactSubject" class="form-control">
+                <option value="Restaurant Table Booking">Dining Table Reservation</option>
+                <option value="Candlelight Dinner & Lounge">Candlelight Dinner / Cabana Booking</option>
+                <option value="Family Gathering & Party">Family Gathering / Birthday Celebration</option>
+                <option value="General Feedback & Queries">General Feedback / Inquiries</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Your Message / Special Requests</label>
+              <textarea id="contactMessage" class="form-control" rows="4" placeholder="Tell us your dining preferences or special date requirements..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Submit Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Google Map Frame -->
+      <div class="map-embed-wrapper">
+        <iframe 
+          title="Virsa Location Amravati"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119293.47352358826!2d77.67499625345717!3d20.895393278564278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a4c28f3bb079%3A0xe1654e9bc354c414!2sSai%20Nagar%2C%20Amravati%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 12px;">
+            <img src="assets/images/virsa-logo.jpg" alt="VIRSA Logo">
+            <div class="brand-text-wrap">
+              <span class="brand-title">VIRSA</span>
+              <span class="brand-subtitle">Restro • Cafe • Lounge</span>
+            </div>
+          </div>
+          <p>
+            Where culinary tradition meets innovation. A heartfelt dining destination in Sai Nagar, Amravati, nurtured by The New Eagle Restaurant.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/917022307566" target="_blank" rel="noopener" class="social-btn" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+917022307566" class="social-btn" title="Call Us" aria-label="Call Us"><i class="fas fa-phone-alt"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="#menu"><i class="fas fa-chevron-right"></i> 120+ Dishes Menu</a></li>
+            <li><a href="#lounge"><i class="fas fa-chevron-right"></i> Rooftop Lounge & Cafe</a></li>
+            <li><a href="#reviews"><i class="fas fa-chevron-right"></i> Patrons' Reviews</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Signatures -->
+        <div class="footer-col">
+          <h4>House Specialties</h4>
+          <ul class="footer-links">
+            <li><a href="#menu"><i class="fas fa-utensils"></i> Murg Rara (Punjab Special)</a></li>
+            <li><a href="#menu"><i class="fas fa-bowl-food"></i> Dal Virsa (Overnight Simmer)</a></li>
+            <li><a href="#menu"><i class="fas fa-fire"></i> Dhuan Wali Dal (Charcoal Smoked)</a></li>
+            <li><a href="#menu"><i class="fas fa-pepper-hot"></i> Saoji & Varhadi Curries</a></li>
+            <li><a href="#menu"><i class="fas fa-drumstick-bite"></i> Clay Pot Dum Biryani</a></li>
+            <li><a href="#menu"><i class="fas fa-ice-cream"></i> Amrud & Banarsi Paan Ice Cream</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact details -->
+        <div class="footer-col">
+          <h4>Contact Desk</h4>
+          <ul class="footer-links" style="gap: 12px;">
+            <li style="color:var(--c-text-secondary); font-size:0.88rem;">
+              <i class="fas fa-map-pin text-gold"></i> Guruchhaya Colony, Sai Nagar, Badnera Rd, Amravati, MH
+            </li>
+            <li>
+              <a href="tel:+917022307566"><i class="fas fa-phone-alt text-gold"></i> +91 70223 07566</a>
+            </li>
+            <li>
+              <a href="mailto:reservations@virsahotel.com"><i class="fas fa-envelope text-gold"></i> reservations@virsahotel.com</a>
+            </li>
+            <li style="color:var(--c-text-secondary); font-size:0.85rem;">
+              <i class="far fa-clock text-gold"></i> 1:00 PM to 12:30 AM Daily
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 VIRSA Restro • Cafe • Lounge. Nurtured by The New Eagle Restaurant.
+        </div>
+        <div>
+          Crafted with royal hospitality excellence for Amravati, Maharashtra.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FLOATING ACTION BUTTONS (WHATSAPP, CALL, TOP)
+       ========================================================================== -->
+  <div class="floating-actions">
+    <!-- Scroll to Top -->
+    <button class="fab-btn fab-top" id="scrollTopBtn" title="Back to top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Direct Call -->
+    <a href="tel:+917022307566" class="fab-btn fab-call" title="Call Virsa Desk" aria-label="Call Virsa Desk">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+    <!-- Direct WhatsApp -->
+    <a href="https://wa.me/917022307566?text=Namaste%20VIRSA%20Restro,%20I%20would%20like%20to%20reserve%20a%20table%20/%20inquire%20about%20dishes" target="_blank" rel="noopener" class="fab-btn fab-whatsapp" title="WhatsApp Concierge" aria-label="WhatsApp Concierge">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       DINING PLATE / ORDER CART DRAWER
+       ========================================================================== -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="order-drawer" id="orderDrawer" aria-label="Dining Plate Order Drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-utensils"></i> Your Dining Plate</h3>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Dining Plate">&times;</button>
+    </div>
+
+    <div class="drawer-body" id="drawerBody">
+      <div class="cart-empty-message">
+        <i class="fas fa-concierge-bell"></i>
+        <h4>Your plate is empty</h4>
+        <p>Explore our royal menu and click "Add to Plate" to build your feast!</p>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-bill-row">
+        <span>Items Subtotal:</span>
+        <span id="drawerSubtotal">₹0</span>
+      </div>
+      <div class="drawer-bill-row">
+        <span>Estimated GST (5%):</span>
+        <span id="drawerTax">₹0</span>
+      </div>
+      <div class="drawer-total-row">
+        <span>Total Estimated Amount:</span>
+        <span id="drawerTotal">₹0</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <button class="btn btn-gold" id="drawerWhatsAppOrder" style="width: 100%;">
+          <i class="fab fa-whatsapp"></i> Order / Inquire via WhatsApp
+        </button>
+        <button class="btn btn-outline-gold" onclick="openTableModal()" style="width: 100%;">
+          <i class="far fa-calendar-check"></i> Book Table with This Menu
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MODAL 1: TABLE RESERVATION MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="tableModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3><i class="fas fa-utensils text-gold"></i> Reserve Dining Table</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="tableReservationForm">
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label for="tableGuestName">Your Name</label>
+            <input type="text" id="tableGuestName" class="form-control" placeholder="Full Name" required>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label for="tableGuestPhone">Mobile Phone</label>
+            <input type="tel" id="tableGuestPhone" class="form-control" placeholder="10-digit Mobile Number" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+            <div class="form-group">
+              <label for="tableDate">Date</label>
+              <input type="date" id="tableDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="tableTime">Time Slot</label>
+              <select id="tableTime" class="form-control" required>
+                <option value="1:00 PM">1:00 PM (Lunch)</option>
+                <option value="2:00 PM">2:00 PM (Lunch)</option>
+                <option value="7:30 PM">7:30 PM (Dinner)</option>
+                <option value="8:30 PM" selected>8:30 PM (Dinner)</option>
+                <option value="9:30 PM">9:30 PM (Late Dinner)</option>
+                <option value="10:30 PM">10:30 PM (Night Dine)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+            <div class="form-group">
+              <label for="tableGuests">Guests Count</label>
+              <select id="tableGuests" class="form-control">
+                <option value="1">1 Person</option>
+                <option value="2" selected>2 Persons (Couple)</option>
+                <option value="4">4 Persons (Family)</option>
+                <option value="6">6 Persons</option>
+                <option value="8">8 Persons</option>
+                <option value="12">12+ Persons (Celebration)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tableSeating">Seating Atmosphere</label>
+              <select id="tableSeating" class="form-control">
+                <option value="Indoor AC Fine Dine">Indoor AC Fine Dine</option>
+                <option value="Rooftop Starlit Lounge">Rooftop Starlit Lounge</option>
+                <option value="Romantic Candlelight Cabana">Romantic Candlelight Cabana</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label for="tableSpecialRequests">Special Requests / Birthday / Anniversary</label>
+            <input type="text" id="tableSpecialRequests" class="form-control" placeholder="e.g. Birthday decoration, corner booth, high chair...">
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">
+            <i class="fas fa-check-circle"></i> Confirm Table Reservation
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: SUCCESS CONFIRMATION MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-dialog">
+      <div class="modal-header" style="justify-content: center; text-align: center;">
+        <h3 id="successModalTitle" style="color:var(--c-gold-400);">Reservation Confirmed!</h3>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 30px;">
+        <div style="width: 70px; height: 70px; background: rgba(16, 185, 129, 0.15); border: 2px solid var(--c-veg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+          <i class="fas fa-check" style="font-size: 2rem; color: var(--c-veg);"></i>
+        </div>
+
+        <div id="successModalRef" class="badge-gold" style="margin-bottom: 16px; font-size: 0.9rem;">
+          Reference ID: VIRSA-000000
+        </div>
+
+        <p id="successModalMessage" style="color: var(--c-text-secondary); line-height: 1.6; margin-bottom: 26px;">
+          Your table reservation has been successfully confirmed.
+        </p>
+
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <button class="btn btn-gold" onclick="closeAllModals()">
+            <i class="fas fa-thumbs-up"></i> Wonderful, Thank You!
+          </button>
+          <a href="https://wa.me/917022307566" target="_blank" rel="noopener" class="btn btn-outline-gold">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
